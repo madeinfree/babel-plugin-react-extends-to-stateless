@@ -1,6 +1,12 @@
 export default function ({types: t}) {
   return {
     visitor: {
+      ArrowFunctionExpression(path, state) {
+        const { functionShadowed } = state.opts
+        if (functionShadowed) {
+          path.arrowFunctionToShadowed();
+        }
+      },
       ClassDeclaration(path) {
         const { node } = path
         const { superClass } = node
