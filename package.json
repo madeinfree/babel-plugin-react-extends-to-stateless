@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-react-extends-to-stateless",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Change Class into Stateless function",
   "main": "lib/index.js",
   "scripts": {
